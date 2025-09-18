@@ -9,21 +9,21 @@ const HeroSection = () => {
       <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center py-20">
         <div className="text-center lg:text-left space-y-8">
           <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground leading-tight">
-            Lucre mais com um freezer 
-            <span className="text-kaskata-yellow"> Kaskata</span> no seu comércio
+            Pronto para aumentar seus 
+            <span className="text-kaskata-yellow animate-pulse"> lucros?</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-            Mais de <strong>2.000 clientes</strong> já contam com a Kaskata para aumentar suas vendas. 
+            Junte-se aos mais de <strong>2.000 comerciantes</strong> que já escolheram a Kaskata.
             Receba um freezer consignado e abasteça seu ponto de venda com produtos de alta aceitação.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button variant="cta" size="lg" className="text-xl px-8 py-4">
-              Solicitar Freezer Consignado
+            <Button variant="cta" size="lg" className="text-xl px-8 py-4 animate-bounce">
+              Solicitar Freezer Agora
             </Button>
             <Button variant="outline-primary" size="lg" className="text-xl px-8 py-4">
-              Saiba Como Funciona
+              Falar no WhatsApp
             </Button>
           </div>
           

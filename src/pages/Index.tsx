@@ -8,6 +8,7 @@ import BenefitsSection from "@/components/BenefitsSection";
 import RegistrationSection from "@/components/RegistrationSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <FAQSection />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

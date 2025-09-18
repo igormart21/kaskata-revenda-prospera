@@ -8,10 +8,11 @@ import { useState } from "react";
 const RegistrationSection = () => {
   const [formData, setFormData] = useState({
     name: '',
+    businessName: '',
     document: '',
     address: '',
-    whatsapp: '',
-    email: ''
+    city: '',
+    phone: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,10 +30,11 @@ const RegistrationSection = () => {
     const message = `Olá! Gostaria de me cadastrar como revendedor Kaskata. 
 Meus dados:
 Nome: ${formData.name}
+Nome do Comércio: ${formData.businessName}
 CNPJ/CPF: ${formData.document}
 Endereço: ${formData.address}
-WhatsApp: ${formData.whatsapp}
-Email: ${formData.email}`;
+Cidade: ${formData.city}
+Telefone: ${formData.phone}`;
     
     const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -63,12 +65,12 @@ Email: ${formData.email}`;
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nome Completo / Razão Social *</Label>
+                  <Label htmlFor="name">Nome Completo *</Label>
                   <Input
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Digite seu nome ou razão social"
+                    placeholder="Digite seu nome completo"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
@@ -77,7 +79,20 @@ Email: ${formData.email}`;
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="document">CNPJ / CPF *</Label>
+                  <Label htmlFor="businessName">Nome do Comércio</Label>
+                  <Input
+                    id="businessName"
+                    name="businessName"
+                    type="text"
+                    placeholder="Nome da sua loja/comércio"
+                    value={formData.businessName}
+                    onChange={handleInputChange}
+                    className="text-lg p-4"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="document">CNPJ / CPF</Label>
                   <Input
                     id="document"
                     name="document"
@@ -85,48 +100,47 @@ Email: ${formData.email}`;
                     placeholder="Digite seu CNPJ ou CPF"
                     value={formData.document}
                     onChange={handleInputChange}
-                    required
                     className="text-lg p-4"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="address">Endereço Completo *</Label>
+                  <Label htmlFor="address">Endereço</Label>
                   <Input
                     id="address"
                     name="address"
                     type="text"
-                    placeholder="Rua, número, bairro, cidade, CEP"
+                    placeholder="Rua, número, bairro, CEP"
                     value={formData.address}
                     onChange={handleInputChange}
+                    className="text-lg p-4"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="city">Cidade *</Label>
+                  <Input
+                    id="city"
+                    name="city"
+                    type="text"
+                    placeholder="Sua cidade"
+                    value={formData.city}
+                    onChange={handleInputChange}
                     required
                     className="text-lg p-4"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="whatsapp">WhatsApp *</Label>
+                  <Label htmlFor="phone">Telefone *</Label>
                   <Input
-                    id="whatsapp"
-                    name="whatsapp"
+                    id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="(11) 99999-9999"
-                    value={formData.whatsapp}
+                    value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="text-lg p-4"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">E-mail</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="seu@email.com"
-                    value={formData.email}
-                    onChange={handleInputChange}
                     className="text-lg p-4"
                   />
                 </div>
@@ -136,7 +150,7 @@ Email: ${formData.email}`;
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
-                  * Campos obrigatórios. Seus dados estão protegidos conosco.
+                  * Campos obrigatórios (nome, cidade e telefone). Seus dados estão protegidos conosco.
                 </p>
               </form>
             </CardContent>
