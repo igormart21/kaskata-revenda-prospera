@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="text-center lg:text-left space-y-8">
           <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground leading-tight">
             Pronto para aumentar seus 
-            <span className="text-kaskata-yellow animate-pulse"> lucros?</span>
+            <span className="text-kaskata-yellow"> lucros?</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
@@ -19,7 +19,7 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button variant="cta" size="lg" className="text-xl px-8 py-4 animate-bounce">
+            <Button variant="cta" size="lg" className="text-xl px-8 py-4">
               Solicitar Freezer Agora
             </Button>
             <Button variant="outline-primary" size="lg" className="text-xl px-8 py-4">

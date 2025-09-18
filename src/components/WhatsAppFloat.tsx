@@ -12,7 +12,7 @@ const WhatsAppFloat = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <Button
         onClick={handleWhatsAppClick}
-        className="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse"
+        className="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 shadow-xl hover:shadow-2xl transition-all duration-300"
         size="icon"
       >
         <MessageCircle className="w-8 h-8 text-white" />
