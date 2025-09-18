@@ -1,9 +1,7 @@
 import { Star, Heart, Zap, Users } from "lucide-react";
 import kaskataDisplay from "@/assets/kaskata-freezer-display.jpeg";
-
 const ProductVarietySection = () => {
-  return (
-    <section className="py-20 bg-muted">
+  return <section className="py-20 bg-muted">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -69,24 +67,15 @@ const ProductVarietySection = () => {
 
           <div className="flex justify-center">
             <div className="relative">
-              <img 
-                src={kaskataDisplay} 
-                alt="Display com variedade de produtos Kaskata"
-                className="w-full max-w-md rounded-2xl shadow-glow transform hover:scale-105 transition-transform duration-500"
-              />
+              <img src={kaskataDisplay} alt="Display com variedade de produtos Kaskata" className="w-full max-w-md rounded-2xl shadow-glow transform hover:scale-105 transition-transform duration-500" />
               <div className="absolute -top-4 -left-4 bg-secondary text-secondary-foreground p-3 rounded-full shadow-elegant">
                 <Star className="w-6 h-6" />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-kaskata-yellow text-foreground p-4 rounded-xl shadow-elegant">
-                <div className="text-sm font-bold">+50</div>
-                <div className="text-xs">Sabores</div>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProductVarietySection;
