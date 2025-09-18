@@ -1,8 +1,6 @@
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer id="contato" className="bg-background border-t">
+  return <footer id="contato" className="bg-background border-t">
       <div className="container py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -98,9 +96,7 @@ const Footer = () => {
       </div>
 
       {/* Background decoration */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-primary"></div>
-    </footer>
-  );
+      
+    </footer>;
 };
-
 export default Footer;
