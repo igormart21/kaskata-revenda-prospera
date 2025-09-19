@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+# Kaskata Sorvetes - Site de Revenda
 
-## Project info
+Site oficial da Kaskata Sorvetes para programa de revenda com freezer consignado.
 
-**URL**: https://lovable.dev/projects/03ff9863-a8b1-4b3a-8b21-81b46b135410
+## 🍦 Sobre o Projeto
 
-## How can I edit this code?
+Este é o site oficial da Kaskata Sorvetes, desenvolvido para apresentar o programa de revenda com freezer consignado. O site oferece informações sobre:
 
-There are several ways of editing your application.
+- Programa de revenda com freezer gratuito
+- Margem de lucro de até 56%
+- Variedade de produtos premium
+- Mais de 30 anos de experiência no mercado
+- Mais de 2.000 clientes ativos
 
-**Use Lovable**
+## 🚀 Tecnologias Utilizadas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/03ff9863-a8b1-4b3a-8b21-81b46b135410) and start prompting.
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Vite** - Build tool e servidor de desenvolvimento
+- **React 18** - Biblioteca para interface de usuário
+- **TypeScript** - Superset do JavaScript com tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário
+- **shadcn/ui** - Componentes de interface modernos
+- **Framer Motion** - Biblioteca de animações
+- **Lucide React** - Ícones modernos
 
-**Use your preferred IDE**
+## 📦 Instalação e Execução
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Pré-requisitos
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-Follow these steps:
+### Passos para executar localmente
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone o repositório**
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd kaskata-revenda-prospera
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. **Execute o servidor de desenvolvimento**
+   ```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. **Acesse o site**
+   Abra [http://localhost:8080](http://localhost:8080) no seu navegador
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Scripts Disponíveis
 
-**Use GitHub Codespaces**
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera a build de produção
+- `npm run preview` - Visualiza a build de produção
+- `npm run lint` - Executa o linter
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📱 Recursos do Site
 
-## What technologies are used for this project?
+### ✨ Animações e Efeitos
+- Animações suaves com Framer Motion
+- Efeitos de hover elegantes
+- Transições luxuosas
+- Partículas flutuantes
+- Gradientes animados
 
-This project is built with:
+### 📋 Formulário de Cadastro
+- Todos os campos obrigatórios
+- Validação HTML5 nativa
+- Design responsivo
+- Integração com WhatsApp
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 🎨 Design Responsivo
+- Otimizado para mobile, tablet e desktop
+- Layout adaptativo
+- Tipografia responsiva
+- Componentes flexíveis
 
-## How can I deploy this project?
+## 🌐 Deploy
 
-Simply open [Lovable](https://lovable.dev/projects/03ff9863-a8b1-4b3a-8b21-81b46b135410) and click on Share -> Publish.
+Para fazer deploy do projeto:
 
-## Can I connect a custom domain to my Lovable project?
+1. **Build de produção**
+   ```bash
+   npm run build
+   ```
 
-Yes, you can!
+2. **Os arquivos estarão na pasta `dist/`**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. **Faça upload para seu servidor de hospedagem**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📞 Contato
+
+- **WhatsApp**: (11) 99999-9999
+- **Telefone**: (11) 3333-3333
+- **E-mail**: contato@kaskata.com.br
+
+## 📄 Licença
+
+Este projeto é propriedade da Kaskata Sorvetes. Todos os direitos reservados.
+
+---
+
+**Kaskata Sorvetes** - Aumente seus lucros com freezer consignado! 🍦

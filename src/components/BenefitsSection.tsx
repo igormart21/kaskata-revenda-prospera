@@ -83,7 +83,7 @@ const BenefitsSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-hero rounded-2xl p-12 text-primary-foreground shadow-glow">
+          <div className="luxury-gradient rounded-2xl p-12 text-primary-foreground shadow-glow">
             <h3 className="text-3xl font-bold mb-4">
               Pronto para aumentar seus lucros?
             </h3>

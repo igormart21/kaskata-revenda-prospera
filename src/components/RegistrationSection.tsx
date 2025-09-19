@@ -43,27 +43,27 @@ Telefone: ${formData.phone}`;
   return (
     <section id="cadastro" className="py-20 bg-background">
       <div className="container">
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Comece a <span className="text-primary">Lucrar Hoje</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
             Preencha o formulário abaixo ou entre em contato diretamente conosco. 
             Em breve um de nossos consultores entrará em contato.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Registration Form */}
           <Card className="shadow-elegant">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl text-primary">Cadastro de Revendedor</CardTitle>
-              <CardDescription className="text-lg">
+            <CardHeader className="text-center px-4 sm:px-6">
+              <CardTitle className="text-xl sm:text-2xl text-primary">Cadastro de Revendedor</CardTitle>
+              <CardDescription className="text-base sm:text-lg">
                 Preencha seus dados e receba seu freezer consignado
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <CardContent className="px-4 sm:px-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nome Completo *</Label>
                   <Input
@@ -74,12 +74,12 @@ Telefone: ${formData.phone}`;
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="text-lg p-4"
+                    className="text-base sm:text-lg p-3 sm:p-4"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="businessName">Nome do Comércio</Label>
+                  <Label htmlFor="businessName">Nome do Comércio *</Label>
                   <Input
                     id="businessName"
                     name="businessName"
@@ -87,12 +87,13 @@ Telefone: ${formData.phone}`;
                     placeholder="Nome da sua loja/comércio"
                     value={formData.businessName}
                     onChange={handleInputChange}
-                    className="text-lg p-4"
+                    required
+                    className="text-base sm:text-lg p-3 sm:p-4"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="document">CNPJ / CPF</Label>
+                  <Label htmlFor="document">CNPJ / CPF *</Label>
                   <Input
                     id="document"
                     name="document"
@@ -100,12 +101,13 @@ Telefone: ${formData.phone}`;
                     placeholder="Digite seu CNPJ ou CPF"
                     value={formData.document}
                     onChange={handleInputChange}
-                    className="text-lg p-4"
+                    required
+                    className="text-base sm:text-lg p-3 sm:p-4"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="address">Endereço</Label>
+                  <Label htmlFor="address">Endereço *</Label>
                   <Input
                     id="address"
                     name="address"
@@ -113,7 +115,8 @@ Telefone: ${formData.phone}`;
                     placeholder="Rua, número, bairro, CEP"
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="text-lg p-4"
+                    required
+                    className="text-base sm:text-lg p-3 sm:p-4"
                   />
                 </div>
 
@@ -127,7 +130,7 @@ Telefone: ${formData.phone}`;
                     value={formData.city}
                     onChange={handleInputChange}
                     required
-                    className="text-lg p-4"
+                    className="text-base sm:text-lg p-3 sm:p-4"
                   />
                 </div>
 
@@ -141,75 +144,75 @@ Telefone: ${formData.phone}`;
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="text-lg p-4"
+                    className="text-base sm:text-lg p-3 sm:p-4"
                   />
                 </div>
 
-                <Button type="submit" variant="cta" className="w-full text-xl py-6">
+                <Button type="submit" variant="cta" className="w-full text-lg sm:text-xl py-4 sm:py-6">
                   Quero Revender com a Kaskata
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
-                  * Campos obrigatórios (nome, cidade e telefone). Seus dados estão protegidos conosco.
+                  * Todos os campos são obrigatórios. Seus dados estão protegidos conosco.
                 </p>
               </form>
             </CardContent>
           </Card>
 
           {/* Contact Options */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <MessageCircle className="w-8 h-8 text-primary mr-4" />
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4" />
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">WhatsApp</h3>
-                    <p className="text-muted-foreground">Atendimento imediato</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">WhatsApp</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">Atendimento imediato</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
                   Fale diretamente com nossa equipe pelo WhatsApp. 
                   Resposta rápida e atendimento personalizado.
                 </p>
-                <Button variant="secondary" className="w-full" size="lg">
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                <Button variant="secondary" className="w-full text-sm sm:text-base" size="lg">
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Chamar no WhatsApp
                 </Button>
               </CardContent>
             </Card>
 
             <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <Phone className="w-8 h-8 text-primary mr-4" />
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <Phone className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4" />
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">Telefone</h3>
-                    <p className="text-muted-foreground">Horário comercial</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">Telefone</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">Horário comercial</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
                   Segunda a sexta, das 8h às 18h<br />
                   Sábado, das 8h às 12h
                 </p>
-                <div className="text-primary font-bold text-lg">
+                <div className="text-primary font-bold text-base sm:text-lg">
                   (11) 3333-3333
                 </div>
               </CardContent>
             </Card>
 
             <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <Mail className="w-8 h-8 text-primary mr-4" />
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4" />
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">E-mail</h3>
-                    <p className="text-muted-foreground">Resposta em até 24h</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">E-mail</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">Resposta em até 24h</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
                   Envie suas dúvidas ou solicite informações por e-mail.
                 </p>
-                <div className="text-primary font-bold">
+                <div className="text-primary font-bold text-sm sm:text-base break-all">
                   contato@kaskata.com.br
                 </div>
               </CardContent>
