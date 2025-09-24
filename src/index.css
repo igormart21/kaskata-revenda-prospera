@@ -17,43 +17,43 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Kaskata Orange - Primary Brand Color */
-    --primary: 18 100% 50%;
+    /* Kaskata Purple - Primary Brand Color */
+    --primary: 270 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 18 100% 45%;
+    --primary-hover: 270 100% 45%;
 
-    /* Blue Accent */
-    --secondary: 220 90% 56%;
-    --secondary-foreground: 0 0% 100%;
+    /* Kaskata Yellow - Secondary Brand Color */
+    --secondary: 45 100% 70%;
+    --secondary-foreground: 270 100% 20%;
 
     /* Soft backgrounds */
-    --muted: 18 100% 97%;
-    --muted-foreground: 220 15% 40%;
+    --muted: 270 100% 97%;
+    --muted-foreground: 270 15% 40%;
 
     --accent: 45 100% 70%;
-    --accent-foreground: 220 15% 15%;
+    --accent-foreground: 270 100% 20%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 92%;
-    --input: 220 15% 95%;
-    --ring: 18 100% 50%;
+    --border: 270 15% 92%;
+    --input: 270 15% 95%;
+    --ring: 270 100% 50%;
 
     /* Custom design tokens */
-    --kaskata-orange: 18 100% 50%;
-    --kaskata-orange-light: 18 100% 90%;
-    --kaskata-blue: 220 90% 56%;
+    --kaskata-purple: 270 100% 50%;
+    --kaskata-purple-light: 270 100% 90%;
     --kaskata-yellow: 45 100% 70%;
+    --kaskata-yellow-dark: 45 100% 60%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(18 100% 50%), hsl(18 100% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(18 100% 50%), hsl(220 90% 56%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 100% 70%), hsl(18 100% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(270 100% 50%), hsl(270 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(270 100% 50%), hsl(45 100% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 70%), hsl(270 100% 60%));
     
     /* Shadows */
-    --shadow-glow: 0 20px 40px hsl(18 100% 50% / 0.2);
-    --shadow-elegant: 0 10px 30px hsl(220 15% 15% / 0.1);
+    --shadow-glow: 0 20px 40px hsl(270 100% 50% / 0.2);
+    --shadow-elegant: 0 10px 30px hsl(270 15% 15% / 0.1);
 
     --radius: 0.5rem;
 
@@ -84,25 +84,25 @@ All colors MUST be HSL.
     --popover: 220 15% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 18 100% 50%;
+    --primary: 270 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 18 100% 55%;
+    --primary-hover: 270 100% 55%;
 
-    --secondary: 220 90% 56%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 45 100% 70%;
+    --secondary-foreground: 270 100% 20%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 270 15% 15%;
+    --muted-foreground: 270 15% 65%;
 
     --accent: 45 100% 70%;
-    --accent-foreground: 220 15% 8%;
+    --accent-foreground: 270 100% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 18 100% 50%;
+    --border: 270 15% 20%;
+    --input: 270 15% 15%;
+    --ring: 270 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -173,7 +173,7 @@ All colors MUST be HSL.
   }
   
   .luxury-gradient {
-    background: linear-gradient(135deg, hsl(18 100% 50%), hsl(220 90% 56%), hsl(45 100% 70%));
+    background: linear-gradient(135deg, hsl(270 100% 50%), hsl(45 100% 70%), hsl(270 100% 60%));
     background-size: 200% 200%;
     animation: gradient-shift 8s ease infinite;
   }
@@ -185,8 +185,8 @@ All colors MUST be HSL.
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px hsl(18 100% 50% / 0.3); }
-  to { box-shadow: 0 0 30px hsl(18 100% 50% / 0.6), 0 0 40px hsl(18 100% 50% / 0.3); }
+  from { box-shadow: 0 0 20px hsl(270 100% 50% / 0.3); }
+  to { box-shadow: 0 0 30px hsl(270 100% 50% / 0.6), 0 0 40px hsl(270 100% 50% / 0.3); }
 }
 
 @keyframes shimmer {

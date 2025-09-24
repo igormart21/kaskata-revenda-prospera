@@ -49,10 +49,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         kaskata: {
-          orange: "hsl(var(--kaskata-orange))",
-          "orange-light": "hsl(var(--kaskata-orange-light))",
-          blue: "hsl(var(--kaskata-blue))",
+          purple: "hsl(var(--kaskata-purple))",
+          "purple-light": "hsl(var(--kaskata-purple-light))",
           yellow: "hsl(var(--kaskata-yellow))",
+          "yellow-dark": "hsl(var(--kaskata-yellow-dark))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

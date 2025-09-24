@@ -96,8 +96,8 @@ Para fazer deploy do projeto:
 ## 📞 Contato
 
 - **WhatsApp**: (11) 99999-9999
-- **Telefone**: (11) 3333-3333
-- **E-mail**: contato@kaskata.com.br
+- **Telefone**: (42) 3635-1088
+- **E-mail**: sorvetes.kaskata@gmail.com
 
 ## 📄 Licença
 
