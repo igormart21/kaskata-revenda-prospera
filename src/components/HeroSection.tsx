@@ -50,19 +50,15 @@ const HeroSection = () => {
       {/* Animated geometric shapes */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 0.1, scale: 1 }}
-        transition={{ duration: 2, delay: 0.5 }}
+        animate={{ opacity: 0.1, scale: 1, rotate: 360 }}
+        transition={{ duration: 2, delay: 0.5, repeat: Infinity, ease: "linear" }}
         className="absolute top-20 left-20 w-32 h-32 border border-yellow-400/20 rounded-full"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 0.1, scale: 1 }}
-        transition={{ duration: 2, delay: 0.7 }}
+        animate={{ opacity: 0.1, scale: 1, rotate: -360 }}
+        transition={{ duration: 2, delay: 0.7, repeat: Infinity, ease: "linear" }}
         className="absolute bottom-20 right-20 w-24 h-24 border border-purple-400/20 rounded-lg"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
       />
       
       <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center py-20">
