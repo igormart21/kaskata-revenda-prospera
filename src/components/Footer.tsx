@@ -113,18 +113,6 @@ const Footer = () => {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-purple-400/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-2 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300">
-                      <MessageCircle className="w-5 h-5 text-yellow-400" />
-                    </div>
-                  </div>
-                  <span className="text-white/80 group-hover:text-white transition-colors duration-300">(11) 99999-9999</span>
-                </motion.div>
-                <motion.div 
-                  className="flex items-center space-x-3 group"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-purple-400/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-2 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300">
                       <Phone className="w-5 h-5 text-yellow-400" />
                     </div>
                   </div>

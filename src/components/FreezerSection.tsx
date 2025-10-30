@@ -3,10 +3,11 @@ import kaskataFreezerDisplay from "@/assets/kaskata-freezer-display.jpeg";
 import FadeInUp from "./animations/FadeInUp";
 import FadeInLeft from "./animations/FadeInLeft";
 import FadeInRight from "./animations/FadeInRight";
+import FloatingOrbs from "./animations/FloatingOrbs";
 
 const FreezerSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30"></div>
@@ -27,6 +28,9 @@ const FreezerSection = () => {
         }}
       ></motion.div>
       
+      {/* Floating orbs for depth */}
+      <FloatingOrbs count={2} />
+      
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 backdrop-blur-[1px] bg-white/[0.01]"></div>
       
@@ -37,7 +41,7 @@ const FreezerSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight"
             style={{
               textShadow: '0 0 30px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.1)'
             }}
@@ -65,7 +69,7 @@ const FreezerSection = () => {
           </motion.p>
         </FadeInUp>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <FadeInLeft className="space-y-10">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}

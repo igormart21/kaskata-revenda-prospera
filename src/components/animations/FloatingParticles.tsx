@@ -10,7 +10,7 @@ interface Particle {
   duration: number;
 }
 
-const FloatingParticles = ({ count = 15 }: { count?: number }) => {
+const FloatingParticles = ({ count = 25 }: { count?: number }) => {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
@@ -20,9 +20,9 @@ const FloatingParticles = ({ count = 15 }: { count?: number }) => {
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: Math.random() * 4 + 2,
+        size: Math.random() * 5 + 4, // Bolas maiores (4-9px)
         delay: Math.random() * 2,
-        duration: Math.random() * 3 + 2,
+        duration: Math.random() * 3 + 3, // Movimento mais suave (3-6s)
       });
     }
     setParticles(newParticles);
@@ -33,19 +33,20 @@ const FloatingParticles = ({ count = 15 }: { count?: number }) => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-kaskata-yellow/20"
+          className="absolute rounded-full bg-kaskata-yellow/30 blur-sm" // Mais visível
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
             width: `${particle.size}px`,
             height: `${particle.size}px`,
+            willChange: 'transform, opacity', // Otimização de performance
           }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{
-            opacity: [0, 0.6, 0],
+            opacity: [0, 0.7, 0], // Mais visível para manter o efeito
             scale: [0, 1, 0],
-            y: [0, -100, -200],
-            x: [0, Math.random() * 20 - 10, Math.random() * 40 - 20],
+            y: [0, -120, -240], // Movimento mais amplo
+            x: [0, Math.random() * 20 - 10, Math.random() * 40 - 20], // Movimento mais amplo
           }}
           transition={{
             duration: particle.duration,

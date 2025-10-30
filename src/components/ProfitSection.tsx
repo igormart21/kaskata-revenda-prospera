@@ -6,7 +6,7 @@ import StaggeredItem from "./animations/StaggeredItem";
 
 const ProfitSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30"></div>

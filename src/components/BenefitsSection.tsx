@@ -1,6 +1,7 @@
 import { Gift, Palette, TrendingUp, Clock, Truck, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import FloatingOrbs from "./animations/FloatingOrbs";
 
 const benefits = [
   {
@@ -67,7 +68,7 @@ const BenefitsSection = () => {
   }, []);
 
   return (
-    <section id="vantagens" className="relative py-24 overflow-hidden">
+    <section id="vantagens" className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30"></div>
@@ -87,6 +88,9 @@ const BenefitsSection = () => {
           `
         }}
       ></motion.div>
+      
+      {/* Floating orbs for depth */}
+      <FloatingOrbs count={2} />
       
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 backdrop-blur-[1px] bg-white/[0.01]"></div>
@@ -149,25 +153,25 @@ const BenefitsSection = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-yellow-400/20 rounded-full blur-lg"></div>
                       <div className="relative w-16 h-16 bg-gradient-to-r from-purple-500 to-yellow-500 rounded-full flex items-center justify-center">
                         <Icon className="w-8 h-8 text-white drop-shadow-lg" />
-                      </div>
+                  </div>
                     </motion.div>
                     <div className="bg-gradient-to-r from-yellow-400/20 to-yellow-500/20 backdrop-blur-sm border border-yellow-400/30 text-yellow-400 px-4 py-2 rounded-full text-sm font-bold">
-                      {benefit.highlight}
-                    </div>
+                    {benefit.highlight}
                   </div>
-                  
+                </div>
+                
                   <h3 className="text-2xl font-black text-white mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                    {benefit.title}
-                  </h3>
-                  
+                  {benefit.title}
+                </h3>
+                
                   <p className="text-white/80 leading-relaxed text-lg">
-                    {benefit.description}
-                  </p>
+                  {benefit.description}
+                </p>
                   
                   {/* Decorative elements */}
                   <div className="absolute top-6 right-6 w-3 h-3 bg-yellow-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+              </div>
               </motion.div>
             );
           })}
@@ -222,7 +226,7 @@ const BenefitsSection = () => {
                   textShadow: '0 0 30px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.1)'
                 }}
               >
-                Pronto para aumentar seus lucros?
+              Pronto para aumentar seus lucros?
               </motion.h3>
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto"
@@ -231,7 +235,7 @@ const BenefitsSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Junte-se aos mais de 2.000 comerciantes que já escolheram a Kaskata.
+              Junte-se aos mais de 2.000 comerciantes que já escolheram a Kaskata.
               </motion.p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <motion.button 
@@ -242,7 +246,7 @@ const BenefitsSection = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-purple-900 px-10 py-5 rounded-xl font-black text-xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
-                    Solicitar Freezer Agora
+                Solicitar Freezer Agora
                   </div>
                 </motion.button>
                 <motion.button 
@@ -252,7 +256,7 @@ const BenefitsSection = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-500/20 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                   <div className="relative border-2 border-yellow-400/80 text-yellow-400 hover:bg-yellow-400/10 hover:border-yellow-400 px-10 py-5 rounded-xl font-black text-xl backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-300">
-                    Falar no WhatsApp
+                Falar no WhatsApp
                   </div>
                 </motion.button>
               </div>

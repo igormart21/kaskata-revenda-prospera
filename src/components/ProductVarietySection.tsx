@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import FadeInUp from "./animations/FadeInUp";
 import StaggeredChildren from "./animations/StaggeredChildren";
 import StaggeredItem from "./animations/StaggeredItem";
+import FloatingOrbs from "./animations/FloatingOrbs";
 
 // Importando as imagens dos sorvetes
 import sundaeImg from "@/assets/SUNDAE.png";
@@ -101,7 +102,7 @@ const ProductVarietySection = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30"></div>
@@ -122,6 +123,9 @@ const ProductVarietySection = () => {
         }}
       ></motion.div>
       
+      {/* Floating orbs for depth */}
+      <FloatingOrbs count={3} />
+      
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 backdrop-blur-[1px] bg-white/[0.01]"></div>
       <div className="container relative z-10">
@@ -131,7 +135,7 @@ const ProductVarietySection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight"
             style={{
               textShadow: '0 0 30px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.1)'
             }}
@@ -145,8 +149,17 @@ const ProductVarietySection = () => {
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
               }}
               transition={{ duration: 3, repeat: Infinity, delay: 0.3 }}
-            >Produtos</motion.span> Premium
+            >Produtos</motion.span>
           </motion.h2>
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-2xl md:text-3xl font-bold mb-6"
+          >
+            <span className="text-white">Linha</span> <span className="text-yellow-400" style={{ textShadow: '0 0 20px rgba(255, 255, 0, 0.3)' }}>Sorvete</span>
+          </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,32 +173,36 @@ const ProductVarietySection = () => {
         </FadeInUp>
 
         {/* Galeria de Produtos */}
-        <StaggeredChildren className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8" staggerDelay={0.1}>
+        <StaggeredChildren className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8" staggerDelay={0.1}>
           {produtos.map((produto, index) => (
             <StaggeredItem key={index}>
           <motion.div 
-                whileHover={{ scale: 1.05, y: -8 }}
+                whileHover={{ scale: 1.02, y: -2 }} // Reduzido movimento
                 className="relative group cursor-pointer"
+                transition={{ duration: 0.2 }} // Reduzido de 0.3 para 0.2
+                style={{ willChange: 'transform' }} // Otimização de performance
               >
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-yellow-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-110"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-yellow-400/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110"></div>
                 
                 {/* Glassmorphism card */}
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="relative bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-200">
                   <div className="relative overflow-hidden rounded-2xl mb-6">
                     <img 
                       src={produto.imagem} 
                       alt={produto.nome}
-                      className="w-full h-36 object-contain group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy" // Lazy loading para melhor performance
+                      decoding="async"
+                      className="w-full h-36 object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <motion.div 
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
-                      className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-yellow-400/20 backdrop-blur-sm flex items-center justify-center rounded-2xl"
+                      className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-yellow-400/20 flex items-center justify-center rounded-2xl"
                     >
           <motion.div 
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        animate={{ rotate: 180 }} // Reduzido de 360 para 180
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }} // Reduzido de 2 para 1
                       >
                         <Star className="w-10 h-10 text-yellow-400 drop-shadow-lg" />
             </motion.div>
@@ -208,7 +225,7 @@ const ProductVarietySection = () => {
         </StaggeredChildren>
 
         {/* Características dos Produtos */}
-        <StaggeredChildren className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20" staggerDelay={0.2}>
+        <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-12 sm:mt-16 lg:mt-20" staggerDelay={0.2}>
           <StaggeredItem>
             <motion.div 
               whileHover={{ scale: 1.03, y: -8 }}

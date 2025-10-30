@@ -19,7 +19,7 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="sticky top-0 z-50 w-full border-b border-yellow-400/20 bg-gradient-to-r from-yellow-400 to-yellow-500 backdrop-blur-md supports-[backdrop-filter]:bg-yellow-400/90"
+      className="sticky top-0 z-50 w-full border-b border-purple-900/10 bg-white backdrop-blur-md supports-[backdrop-filter]:bg-white/90"
     >
       <div className="container flex h-16 items-center justify-between">
         <motion.div 
@@ -31,7 +31,7 @@ const Header = () => {
           <img 
             src={kaskataLogo} 
             alt="Kaskata Sorvetes" 
-            className="h-10 w-auto"
+            className="h-12 w-auto"
           />
         </motion.div>
 
@@ -44,7 +44,7 @@ const Header = () => {
         >
           <motion.a 
             href="#como-funciona" 
-            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300 hover:scale-105"
+            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300 hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -55,7 +55,7 @@ const Header = () => {
           </motion.a>
           <motion.a 
             href="#vantagens" 
-            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300 hover:scale-105"
+            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300 hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -66,7 +66,7 @@ const Header = () => {
           </motion.a>
           <motion.a 
             href="#cadastro" 
-            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300 hover:scale-105"
+            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300 hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -77,7 +77,7 @@ const Header = () => {
           </motion.a>
           <motion.a 
             href="#contato" 
-            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300 hover:scale-105"
+            className="relative group px-4 py-2 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300 hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -164,7 +164,7 @@ const Header = () => {
             >
               <motion.a 
                 href="#como-funciona" 
-                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300"
+                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300"
                 whileHover={{ x: 10 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-600/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -174,7 +174,7 @@ const Header = () => {
               </motion.a>
               <motion.a 
                 href="#vantagens" 
-                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300"
+                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300"
                 whileHover={{ x: 10 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-600/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -184,7 +184,7 @@ const Header = () => {
               </motion.a>
               <motion.a 
                 href="#cadastro" 
-                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300"
+                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300"
                 whileHover={{ x: 10 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-600/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -194,7 +194,7 @@ const Header = () => {
               </motion.a>
               <motion.a 
                 href="#contato" 
-                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duration-300"
+                className="relative group px-4 py-3 rounded-xl text-sm font-medium text-purple-900/90 hover:text-purple-900 transition-all duração-300"
                 whileHover={{ x: 10 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-600/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

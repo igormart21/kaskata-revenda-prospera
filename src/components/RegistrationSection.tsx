@@ -42,7 +42,7 @@ Telefone: ${formData.phone}`;
   };
 
   return (
-    <section id="cadastro" className="relative py-24 overflow-hidden">
+    <section id="cadastro" className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30"></div>
@@ -67,13 +67,13 @@ Telefone: ${formData.phone}`;
       <div className="absolute inset-0 backdrop-blur-[1px] bg-white/[0.01]"></div>
       
       <div className="container relative z-10">
-        <div className="text-center max-w-5xl mx-auto mb-20 px-4">
+        <div className="text-center max-w-5xl mx-auto mb-12 sm:mb-16 lg:mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight"
             style={{
               textShadow: '0 0 30px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.1)'
             }}
@@ -98,7 +98,7 @@ Telefone: ${formData.phone}`;
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
           {/* Registration Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -112,115 +112,115 @@ Telefone: ${formData.phone}`;
             
             {/* Glassmorphism form */}
             <Card className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl shadow-2xl hover:bg-white/10 transition-all duration-300">
-              <CardHeader className="text-center px-6 py-8">
+              <CardHeader className="text-center px-4 sm:px-6 py-6 sm:py-8">
                 <CardTitle className="text-2xl font-black text-white bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                   Cadastro de Revendedor
                 </CardTitle>
                 <CardDescription className="text-lg text-white/80">
                   Preencha seus dados e receba seu freezer em comodato
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="px-6 pb-8">
+              </CardDescription>
+            </CardHeader>
+              <CardContent className="px-4 sm:px-6 pb-6 sm:pb-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-3">
                     <Label htmlFor="name" className="text-white font-medium">Nome Completo *</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Digite seu nome completo"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Digite seu nome completo"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                       className="text-lg p-4 bg-white/10 border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-yellow-400/50 rounded-xl backdrop-blur-sm"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="businessName" className="text-white font-medium">Nome do Comércio *</Label>
-                    <Input
-                      id="businessName"
-                      name="businessName"
-                      type="text"
-                      placeholder="Nome da sua loja/comércio"
-                      value={formData.businessName}
-                      onChange={handleInputChange}
-                      required
+                  <Input
+                    id="businessName"
+                    name="businessName"
+                    type="text"
+                    placeholder="Nome da sua loja/comércio"
+                    value={formData.businessName}
+                    onChange={handleInputChange}
+                    required
                       className="text-lg p-4 bg-white/10 border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-yellow-400/50 rounded-xl backdrop-blur-sm"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="document" className="text-white font-medium">CNPJ / CPF *</Label>
-                    <Input
-                      id="document"
-                      name="document"
-                      type="text"
-                      placeholder="Digite seu CNPJ ou CPF"
-                      value={formData.document}
-                      onChange={handleInputChange}
-                      required
+                  <Input
+                    id="document"
+                    name="document"
+                    type="text"
+                    placeholder="Digite seu CNPJ ou CPF"
+                    value={formData.document}
+                    onChange={handleInputChange}
+                    required
                       className="text-lg p-4 bg-white/10 border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-yellow-400/50 rounded-xl backdrop-blur-sm"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="address" className="text-white font-medium">Endereço *</Label>
-                    <Input
-                      id="address"
-                      name="address"
-                      type="text"
-                      placeholder="Rua, número, bairro, CEP"
-                      value={formData.address}
-                      onChange={handleInputChange}
-                      required
+                  <Input
+                    id="address"
+                    name="address"
+                    type="text"
+                    placeholder="Rua, número, bairro, CEP"
+                    value={formData.address}
+                    onChange={handleInputChange}
+                    required
                       className="text-lg p-4 bg-white/10 border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-yellow-400/50 rounded-xl backdrop-blur-sm"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="city" className="text-white font-medium">Cidade *</Label>
-                    <Input
-                      id="city"
-                      name="city"
-                      type="text"
-                      placeholder="Sua cidade"
-                      value={formData.city}
-                      onChange={handleInputChange}
-                      required
+                  <Input
+                    id="city"
+                    name="city"
+                    type="text"
+                    placeholder="Sua cidade"
+                    value={formData.city}
+                    onChange={handleInputChange}
+                    required
                       className="text-lg p-4 bg-white/10 border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-yellow-400/50 rounded-xl backdrop-blur-sm"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <div className="space-y-3">
                     <Label htmlFor="phone" className="text-white font-medium">Telefone *</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="(11) 99999-9999"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="(11) 99999-9999"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
                       className="text-lg p-4 bg-white/10 border-white/20 text-white placeholder-white/50 focus:bg-white/20 focus:border-yellow-400/50 rounded-xl backdrop-blur-sm"
-                    />
-                  </div>
+                  />
+                </div>
 
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Button type="submit" className="w-full text-xl py-6 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-purple-900 font-black rounded-xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
-                      Quero Revender com a Kaskata
-                    </Button>
+                    <Button type="submit" className="w-full text-base sm:text-lg lg:text-xl py-4 sm:py-5 lg:py-6 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-purple-900 font-black rounded-xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
+                  Quero Revender com a Kaskata
+                </Button>
                   </motion.div>
 
                   <p className="text-sm text-white/60 text-center">
-                    * Todos os campos são obrigatórios. Seus dados estão protegidos conosco.
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
+                  * Todos os campos são obrigatórios. Seus dados estão protegidos conosco.
+                </p>
+              </form>
+            </CardContent>
+          </Card>
           </motion.div>
 
           {/* Contact Options */}
@@ -250,7 +250,7 @@ Telefone: ${formData.phone}`;
                       <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-blue-400/20 rounded-full blur-lg"></div>
                       <MessageCircle className="relative w-10 h-10 text-green-400 mr-4 drop-shadow-lg" />
                     </motion.div>
-                    <div>
+                  <div>
                       <h3 className="text-2xl font-black text-white bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                         WhatsApp
                       </h3>
@@ -258,23 +258,23 @@ Telefone: ${formData.phone}`;
                     </div>
                   </div>
                   <p className="text-lg text-white/80 mb-6 leading-relaxed">
-                    Fale diretamente com nossa equipe pelo WhatsApp. 
-                    Resposta rápida e atendimento personalizado.
-                  </p>
+                  Fale diretamente com nossa equipe pelo WhatsApp. 
+                  Resposta rápida e atendimento personalizado.
+                </p>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Button variant="secondary" className="w-full text-lg py-4 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300">
+                    <Button variant="secondary" className="w-full text-base sm:text-lg py-3 sm:py-4 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300">
                       <MessageCircle className="w-5 h-5 mr-2" />
-                      Chamar no WhatsApp
-                    </Button>
+                  Chamar no WhatsApp
+                </Button>
                   </motion.div>
                   
                   {/* Decorative elements */}
                   <div className="absolute top-6 right-6 w-3 h-3 bg-green-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </CardContent>
-              </Card>
+              </CardContent>
+            </Card>
             </motion.div>
 
             <motion.div 
@@ -296,7 +296,7 @@ Telefone: ${formData.phone}`;
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-lg"></div>
                       <Phone className="relative w-10 h-10 text-blue-400 mr-4 drop-shadow-lg" />
                     </motion.div>
-                    <div>
+                  <div>
                       <h3 className="text-2xl font-black text-white bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                         Telefone
                       </h3>
@@ -304,17 +304,17 @@ Telefone: ${formData.phone}`;
                     </div>
                   </div>
                   <p className="text-lg text-white/80 mb-4 leading-relaxed">
-                    Segunda a sexta, das 8h às 18h<br />
-                    Sábado, das 8h às 12h
-                  </p>
+                  Segunda a sexta, das 8h às 18h<br />
+                  Sábado, das 8h às 12h
+                </p>
                   <div className="text-2xl font-black bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
                     (42) 3635-1088
-                  </div>
+                </div>
                   
                   {/* Decorative elements */}
                   <div className="absolute top-6 right-6 w-3 h-3 bg-blue-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </CardContent>
-              </Card>
+              </CardContent>
+            </Card>
             </motion.div>
 
             <motion.div 
@@ -336,7 +336,7 @@ Telefone: ${formData.phone}`;
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-lg"></div>
                       <Mail className="relative w-10 h-10 text-purple-400 mr-4 drop-shadow-lg" />
                     </motion.div>
-                    <div>
+                  <div>
                       <h3 className="text-2xl font-black text-white bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                         E-mail
                       </h3>
@@ -344,16 +344,16 @@ Telefone: ${formData.phone}`;
                     </div>
                   </div>
                   <p className="text-lg text-white/80 mb-4 leading-relaxed">
-                    Envie suas dúvidas ou solicite informações por e-mail.
-                  </p>
+                  Envie suas dúvidas ou solicite informações por e-mail.
+                </p>
                   <div className="text-xl font-bold text-white/90 break-all">
                     sorvetes.kaskata@gmail.com
-                  </div>
+                </div>
                   
                   {/* Decorative elements */}
                   <div className="absolute top-6 right-6 w-3 h-3 bg-purple-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </CardContent>
-              </Card>
+              </CardContent>
+            </Card>
             </motion.div>
           </motion.div>
         </div>

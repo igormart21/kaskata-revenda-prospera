@@ -1,0 +1,52 @@
+/* Performance Optimizations */
+
+/* Otimização para elementos animados */
+.motion-element {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Otimização para imagens */
+img {
+  image-rendering: optimizeSpeed;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduzir repaints durante scroll */
+.scroll-optimized {
+  contain: layout style paint;
+}
+
+/* Otimização para elementos com blur */
+.blur-optimized {
+  will-change: filter;
+  transform: translateZ(0);
+}
+
+/* Otimização para gradientes animados */
+.gradient-optimized {
+  will-change: background-position;
+  transform: translateZ(0);
+}
+
+/* Reduzir animações em dispositivos com preferência reduzida */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Otimização para elementos com backdrop-blur */
+.backdrop-blur-optimized {
+  will-change: backdrop-filter;
+  transform: translateZ(0);
+}
+
+/* Otimização para elementos com scale */
+.scale-optimized {
+  will-change: transform;
+  transform: translateZ(0);
+}

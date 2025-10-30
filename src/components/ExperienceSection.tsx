@@ -1,9 +1,10 @@
 import { Award, Users, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import FloatingOrbs from "./animations/FloatingOrbs";
 
 const ExperienceSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30" />
@@ -20,6 +21,9 @@ const ExperienceSection = () => {
           animation: 'meshMove 20s ease-in-out infinite'
         }}
       />
+      
+      {/* Floating orbs for depth */}
+      <FloatingOrbs count={2} />
       
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 backdrop-blur-[1px] bg-white/[0.01]" />
