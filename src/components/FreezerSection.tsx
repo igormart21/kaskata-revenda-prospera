@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import kaskataFreezerDisplay from "@/assets/kaskata-freezer-display.jpeg";
+import kaskataFreezerDisplay from "@/assets/WhatsApp Image 2025-10-28 at 13.26.38.jpeg";
 import FadeInUp from "./animations/FadeInUp";
 import FadeInLeft from "./animations/FadeInLeft";
 import FadeInRight from "./animations/FadeInRight";

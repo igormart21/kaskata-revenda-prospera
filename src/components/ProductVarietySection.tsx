@@ -1,5 +1,6 @@
-import { Star, Heart, Zap, Users } from "lucide-react";
+import { Star, Heart, Zap, Users, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import FadeInUp from "./animations/FadeInUp";
 import StaggeredChildren from "./animations/StaggeredChildren";
 import StaggeredItem from "./animations/StaggeredItem";
@@ -27,22 +28,22 @@ const ProductVarietySection = () => {
     {
       nome: "SUNDAE",
       imagem: sundaeImg,
-      descricao: "Sorvete cremoso com cobertura especial, perfeito para quem busca sabor e qualidade premium."
+      descricao: "A linha Kaskata Sundae foi criada para quem ama um sorvete gostoso, cremoso e irresistível, perfeito para todos os momentos. Cada copo é uma combinação equilibrada de sabor, textura e cobertura generosa que faz cada colherada ser uma explosão de prazer."
     },
     {
       nome: "QUERO MAIS",
       imagem: queroMaisImg,
-      descricao: "Sabor irresistível que faz você querer mais. Textura cremosa e sabor marcante."
+      descricao: "A linha Kaskata Quero Mais encanta à primeira vista com seu lindo pote e tampa bolha, que valoriza o produto e desperta o desejo de experimentar. Cada detalhe foi pensado para proporcionar uma experiência irresistível, tanto na aparência quanto no sabor."
     },
     {
       nome: "KAPARAÓ",
       imagem: kaparaoImg,
-      descricao: "Sorvete com sabor único e diferenciado, desenvolvido para paladares exigentes."
+      descricao: "A linha Kaskata Kaparaó foi criada para proporcionar alto giro no comércio com produtos de ótima aceitação e excelente custo-benefício. Cada pote é um convite ao sabor e à cremosidade que conquistam o cliente desde a primeira colherada."
     },
     {
       nome: "CHIQUE BOM",
       imagem: chiqueBomImg,
-      descricao: "Elegância e sabor em uma combinação perfeita. Sorvete premium com ingredientes selecionados."
+      descricao: "A linha Kaskata Chique Bom foi criada para quem busca sabor e sofisticação em cada mordida. São sobremesas irresistivelmente cremosas, com combinações que encantam pelo contraste e pela textura perfeita entre o recheio e a cobertura de chocolate."
     },
     {
       nome: "YESS!!",
@@ -52,22 +53,22 @@ const ProductVarietySection = () => {
     {
       nome: "GREGO",
       imagem: gregoImg,
-      descricao: "Inspirado na tradição grega, sorvete cremoso com textura diferenciada e sabor autêntico."
+      descricao: "A linha Kaskata Grego traz uma experiência irresistível de sabor e cremosidade, em um lindo pote de papel que reflete sofisticação e cuidado em cada detalhe. Produzido com ingredientes selecionados, cada sorvete é uma combinação perfeita de textura cremosa e pedaços de frutas frescas, garantindo um sabor autêntico e marcante."
     },
     {
       nome: "LINHA ZERO %",
       imagem: linhaZeroImg,
-      descricao: "Linha especial zero açúcar e zero lactose, desenvolvida para clientes com restrições alimentares."
+      descricao: "A Linha Kaskata Zero% foi criada para quem busca prazer e equilíbrio no mesmo pote. Com um design sofisticado em pote de papel, cada detalhe reflete qualidade e cuidado com o sabor. Os sorvetes são extremamente cremosos, zero açúcar e zero lactose, proporcionando uma experiência deliciosa sem abrir mão do bem-estar."
     },
     {
       nome: "AÇAÍ 160ML",
       imagem: acai160Img,
-      descricao: "Açaí cremoso e nutritivo no formato ideal para consumo individual."
+      descricao: "A linha Kaskata Açaí 160 ml foi criada para oferecer uma experiência intensa, cremosa e refrescante em um tamanho perfeito para qualquer momento do dia. Cada pote é feito com açaí verdadeiro, mantendo a autenticidade e o sabor marcante que só a Kaskata entrega."
     },
     {
       nome: "AÇAÍ 1L",
       imagem: acai1LImg,
-      descricao: "Açaí cremoso em embalagem familiar, perfeito para compartilhar momentos especiais."
+      descricao: "A linha Kaskata Açaí foi criada para quem busca sabor, energia e qualidade em cada colherada. Produzido com açaí verdadeiro e ingredientes selecionados, oferece uma textura cremosa e refrescante que conquista em qualquer momento do dia."
     },
     {
       nome: "DUAL",
@@ -77,29 +78,43 @@ const ProductVarietySection = () => {
     {
       nome: "1 LITRO",
       imagem: umLitroImg,
-      descricao: "Sorvete cremoso em embalagem familiar, ideal para toda a família."
+      descricao: "A linha de potes Kaskata 1 Litro foi criada para encantar no ponto de venda — um lindo pote oval, moderno e vibrante, que chama atenção e valoriza a experiência do consumidor. Cada sabor entrega cremosidade, intensidade e pedaços generosos de ingredientes selecionados, transformando o simples ato de tomar sorvete em um momento especial."
     },
     {
       nome: "UNI-DUNI-TÊ",
       imagem: uniDuniTeImg,
-      descricao: "Sorvete divertido com múltiplos sabores, perfeito para crianças e adultos."
+      descricao: "O pote Kaskata Uni-Duni-Tê é uma explosão de cor, sabor e diversão! Em uma embalagem vibrante de 2 litros, o cliente encontra três sabores incríveis que conquistam à primeira colherada: Tutti-Frutti, Algodão Doce e Mirtilo."
     },
     {
       nome: "PREMIATTA",
       imagem: premiattaImg,
-      descricao: "Linha premium com ingredientes selecionados e textura cremosíssima."
+      descricao: "O nome já diz tudo: Premiatta é sinônimo de sofisticação e prazer em cada colherada. Uma linha premium em todos os sentidos — da cremosidade à textura impecável, passando pelo sabor marcante que conquista até os paladares mais exigentes. Seu pote de 1,5 litro traz uma experiência completa, com design elegante e moderno, que traduz a excelência da Kaskata."
     },
     {
       nome: "GELADITOS",
       imagem: geladitosImg,
-      descricao: "Pequenos sorvetes com grandes sabores. Perfeitos para lanches rápidos."
+      descricao: "A linha Kaskata Geladitos é perfeita para promoções e destaque nos supermercados. Seu pote de 1,5 litros tem uma embalagem marcante, moderna e atrativa, que chama a atenção do consumidor no ponto de venda. Os sabores são cremosos, equilibrados e irresistivelmente saborosos, oferecendo combinações que agradam a todos os paladares."
     },
     {
       nome: "BEST SUNDAE",
       imagem: bestSundaeImg,
-      descricao: "O melhor sundae da linha, com coberturas especiais e ingredientes premium."
+      descricao: "A linha Kaskata Best Sundae é sinônimo de prazer e sabor em cada colherada. O lindo pote transparente valoriza o produto, revelando as camadas generosas de sorvete cremoso, recheios intensos e coberturas irresistíveis, despertando o desejo já no ponto de venda."
     }
   ];
+
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  // Função para obter a primeira frase da descrição (preview)
+  const getPreview = (text: string, maxLength: number = 80) => {
+    if (text.length <= maxLength) return text;
+    const preview = text.substring(0, maxLength);
+    const lastSpace = preview.lastIndexOf(' ');
+    return lastSpace > 0 ? preview.substring(0, lastSpace) + '...' : preview + '...';
+  };
+
+  const toggleDescription = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden px-4 sm:px-6 lg:px-8">
@@ -173,12 +188,12 @@ const ProductVarietySection = () => {
         </FadeInUp>
 
         {/* Galeria de Produtos */}
-        <StaggeredChildren className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8" staggerDelay={0.1}>
+        <StaggeredChildren className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-stretch" staggerDelay={0.1}>
           {produtos.map((produto, index) => (
             <StaggeredItem key={index}>
           <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }} // Reduzido movimento
-                className="relative group cursor-pointer"
+                className="relative group cursor-pointer h-full flex"
                 transition={{ duration: 0.2 }} // Reduzido de 0.3 para 0.2
                 style={{ willChange: 'transform' }} // Otimização de performance
               >
@@ -186,8 +201,8 @@ const ProductVarietySection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-yellow-400/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110"></div>
                 
                 {/* Glassmorphism card */}
-                <div className="relative bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-200">
-                  <div className="relative overflow-hidden rounded-2xl mb-6">
+                <div className="relative bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-200 flex flex-col h-full">
+                  <div className="relative overflow-hidden rounded-2xl mb-6 flex-shrink-0">
                     <img 
                       src={produto.imagem} 
                       alt={produto.nome}
@@ -208,12 +223,40 @@ const ProductVarietySection = () => {
             </motion.div>
           </motion.div>
         </div>
-                  <h3 className="font-black text-base text-white mb-3 text-center bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                  <h3 className="font-black text-base text-white mb-3 text-center bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent flex-shrink-0">
                     {produto.nome}
                   </h3>
-                  <p className="text-sm text-white/70 text-center leading-relaxed">
-                    {produto.descricao}
-                  </p>
+                  <div className="relative flex-grow flex flex-col min-h-[3.5rem]">
+                    <div className="overflow-hidden flex-grow">
+                      <motion.p
+                        key={expandedIndex === index ? "expanded" : "collapsed"}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-sm text-white/70 text-center leading-relaxed"
+                      >
+                        {expandedIndex === index ? produto.descricao : getPreview(produto.descricao)}
+                      </motion.p>
+                    </div>
+                    <div className="mt-2 flex-shrink-0 min-h-[1.5rem] flex justify-center">
+                      {produto.descricao.length > 80 && (
+                        <button
+                          onClick={() => toggleDescription(index)}
+                          className="mx-auto flex items-center gap-1 text-yellow-400 hover:text-yellow-300 text-xs font-semibold transition-colors duration-200"
+                          aria-expanded={expandedIndex === index}
+                        >
+                          <span>{expandedIndex === index ? "Ver menos" : "Ver mais"}</span>
+                          <motion.div
+                            animate={{ rotate: expandedIndex === index ? 180 : 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                          >
+                            <ChevronDown className="w-3 h-3" />
+                          </motion.div>
+                        </button>
+                      )}
+                    </div>
+                  </div>
                   
                   {/* Decorative elements */}
                   <div className="absolute top-4 right-4 w-2 h-2 bg-yellow-400/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

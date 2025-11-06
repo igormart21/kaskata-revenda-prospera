@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import kaskataFreezersMain from "@/assets/kaskata-freezers-main-optimized.png";
+import kaskataFreezersMain from "@/assets/WhatsApp Image 2025-10-28 at 13.27.16.jpeg";
 import { motion } from "framer-motion";
 import FadeInLeft from "./animations/FadeInLeft";
 import FadeInRight from "./animations/FadeInRight";
