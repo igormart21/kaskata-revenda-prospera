@@ -129,32 +129,31 @@ const PicoleSection = () => {
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-800/30 via-transparent to-indigo-800/30" />
-      
-      {/* Animated mesh gradient overlay */}
-      <div 
-        className="absolute inset-0 opacity-30"
+
+      {/* Static mesh gradient - menos pesado */}
+      <div
+        className="absolute inset-0 opacity-20"
         style={{
           background: `
             radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
             radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
             radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%)
-          `,
-          animation: 'meshMove 20s ease-in-out infinite'
+          `
         }}
       />
-      
+
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 backdrop-blur-[1px] bg-white/[0.01]" />
-      
+
       <div className="container relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center max-w-5xl mx-auto mb-20"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -164,22 +163,22 @@ const PicoleSection = () => {
               textShadow: '0 0 30px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.1)'
             }}
           >
-            Linha <motion.span 
+            Linha <motion.span
               className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent"
-              animate={{ 
+              animate={{
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
               }}
               transition={{ duration: 3, repeat: Infinity, delay: 0.3 }}
             >Picolé</motion.span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-4xl mx-auto"
           >
-            Descubra nossa variedade de picolés premium, desenvolvidos com ingredientes selecionados 
+            Descubra nossa variedade de picolés premium, desenvolvidos com ingredientes selecionados
             para oferecer sabores únicos e experiências inesquecíveis.
           </motion.p>
         </motion.div>
@@ -192,14 +191,15 @@ const PicoleSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }} // Reduzido delay
               className="relative group h-full flex"
+              style={{ willChange: 'transform' }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-yellow-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex flex-col h-full">
                 <div className="relative mb-4 flex-shrink-0">
-                  <img 
-                    src={picole.imagem} 
+                  <img
+                    src={picole.imagem}
                     alt={picole.nome}
                     loading="lazy" // Lazy loading para melhor performance
                     decoding="async"
@@ -208,8 +208,9 @@ const PicoleSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <motion.div
                     className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    animate={{ rotate: [0, 5, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
+                    animate={{ rotate: [0, 3, -3, 0] }} // Movimento reduzido
+                    transition={{ duration: 3, repeat: Infinity }} // Mais lento
+                    style={{ willChange: 'transform' }}
                   >
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                   </motion.div>
@@ -248,7 +249,7 @@ const PicoleSection = () => {
                     )}
                   </div>
                 </div>
-                
+
                 {/* Decorative elements */}
                 <div className="absolute top-3 right-3 w-2 h-2 bg-yellow-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-3 left-3 w-1 h-1 bg-purple-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -259,7 +260,7 @@ const PicoleSection = () => {
 
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -268,7 +269,7 @@ const PicoleSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-purple-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 text-center group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300">
-              <motion.div 
+              <motion.div
                 className="relative mx-auto w-24 h-24 mb-8"
                 whileHover={{ scale: 1.05, rotate: 2 }} // Reduzido movimento
                 transition={{ duration: 0.3 }}
@@ -282,17 +283,17 @@ const PicoleSection = () => {
                 Para Todos os Públicos
               </h3>
               <p className="text-white/80 text-lg leading-relaxed">
-                Desde picolés tradicionais até sabores inovadores, atendemos 
+                Desde picolés tradicionais até sabores inovadores, atendemos
                 todos os gostos e faixas etárias.
               </p>
-              
+
               {/* Decorative elements */}
               <div className="absolute top-6 right-6 w-3 h-3 bg-yellow-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -301,7 +302,7 @@ const PicoleSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-purple-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 text-center group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300">
-              <motion.div 
+              <motion.div
                 className="relative mx-auto w-24 h-24 mb-8"
                 whileHover={{ scale: 1.05, rotate: 2 }} // Reduzido movimento
                 transition={{ duration: 0.3 }}
@@ -315,17 +316,17 @@ const PicoleSection = () => {
                 Sabores Únicos
               </h3>
               <p className="text-white/80 text-lg leading-relaxed">
-                Desenvolvemos sabores exclusivos e inovadores que destacam 
+                Desenvolvemos sabores exclusivos e inovadores que destacam
                 sua loja da concorrência.
               </p>
-              
+
               {/* Decorative elements */}
               <div className="absolute top-6 right-6 w-3 h-3 bg-yellow-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -334,7 +335,7 @@ const PicoleSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-purple-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 text-center group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300">
-              <motion.div 
+              <motion.div
                 className="relative mx-auto w-24 h-24 mb-8"
                 whileHover={{ scale: 1.05, rotate: 2 }} // Reduzido movimento
                 transition={{ duration: 0.3 }}
@@ -348,10 +349,10 @@ const PicoleSection = () => {
                 Qualidade Premium
               </h3>
               <p className="text-white/80 text-lg leading-relaxed">
-                Ingredientes selecionados e processo de fabricação rigoroso 
+                Ingredientes selecionados e processo de fabricação rigoroso
                 garantem a melhor qualidade.
               </p>
-              
+
               {/* Decorative elements */}
               <div className="absolute top-6 right-6 w-3 h-3 bg-yellow-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
